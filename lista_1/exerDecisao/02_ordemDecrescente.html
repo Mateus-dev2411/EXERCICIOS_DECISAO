@@ -5,9 +5,9 @@
     */
 
     //ENTRADA
-    const nun1 = Number(prompt(`Digite o primeiro numero`))
-    const nun2 = Number(prompt(`Digite o segundo numero`))
-    const nun3 = Number(prompt(`Digite o terceiro numero`))
+    const nun1 = Number(prompt(`Digite o primeiro numero`));
+    const nun2 = Number(prompt(`Digite o segundo numero`));
+    const nun3 = Number(prompt(`Digite o terceiro numero`));
 
 
 
@@ -25,7 +25,10 @@
             meio = nun3;
             menor = nun2;
         }
+
+        alert(`Maior ${maior}, Meio ${meio}, Menor ${menor}.`)
     }
+
     else if (nun2 >= nun1 && nun2 >= nun3){
         maior = nun2;
         if (nun1 >= nun3){
@@ -35,6 +38,9 @@
             meio = nun3;
             menor = nun1;
         }
+
+        alert(`Maior ${maior}, Meio ${meio}, Menor ${menor}.`)
+
     }
     else if (nun3 >= nun1 && nun3 >= nun2){
         maior = nun3;
@@ -45,9 +51,12 @@
             meio = nun1;
             menor = nun2;
         }
+
+        alert(`Maior ${maior}, Meio ${meio}, Menor ${menor}.`)
+
     } else {
         alert(`Coloca um numero arrombado`)
     }
 
-    alert(`Maior ${maior}, Meio ${meio}, Menor ${menor}.`)
+    
 </script>
