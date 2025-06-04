@@ -11,7 +11,7 @@
     //ENTRADA
     const n1 = Number(prompt(`Digite o 1° numero`));
     const n2 = Number(prompt(`Digite o 2° numero`));
-    const op = Number(prompt(`Digite a operação que deseja utilizar`));
+    const op = Number(prompt(`Digite o nome ou a operação que deseja utilizar`));
 
     //PROCESSAMENTO
 
@@ -27,16 +27,25 @@
     if (op == String){
         if (op == mais){
         alert(`${resultadoMAIS}`)
-      } else if (op == ){
-
-      } else if (op == ){
-        
-      } else if (op == ){
-        
+        } else if (op == menos){
+        alert(`${resultadoMENOS}`)
+      } else if (op == divisão){
+        alert(`${resultadoDIVISÃO}`)
       } else if (op == multiplicação){
        alert(`${resultadoMULTIPLICAÇãO}`) 
       }
-
+    } else if (op == Number){
+        alert(`Digite uma operação ou o nome da mesma`)
+    } else {
+        if (op == "+"){
+        alert(`${resultadoMAIS}`)
+        } else if (op == "-"){
+        alert(`${resultadoMENOS}`)
+      } else if (op == "/" || op == "%"){
+        alert(`${resultadoDIVISÃO}`)
+      } else if (op == multiplicação){
+       alert(`${resultadoMULTIPLICAÇãO}`) 
+        }
     }
     //SAÍDA
 
