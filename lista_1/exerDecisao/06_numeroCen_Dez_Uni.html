@@ -18,13 +18,11 @@
     if (a > valorMX){
         alert(`Digite um valor dentro dos parametros`);
     } else {
-    const centena = Math.floor( a / 100 );
-
-    const dezena = Math.floor((a % 100 ) / 10);
-
-    const unidade = a % 10
+    centena = Math.floor( a / 100 );
+    dezena = Math.floor((a % 100 ) / 10);
+    unidade = a % 10
     
     //SAÍDA
-    alert(`Você ${centena} centenas \n ${dezena} dezenas \n ${unidade} unidades`);
+    alert(`Você tem \n ${centena} centenas \n ${dezena} dezenas \n ${unidade} unidades`);
     }
 </script>

@@ -12,7 +12,13 @@
     //PROCESSAMENTO
     if (l1 + l2 > l3 && l1 + l3 > l1 && l2 + l3 > l1){
         alert(`Perfeito, agora vamos verificar que tipo de triangulo é`);
-
+        if (l1 === l2 && l1 & l2 != l3){
+            alert(`Isósceles`);
+        } else if (l1 != l2 && l1 != l3 && l2 != l3){
+            alert(`Escaleno`);
+        } else {
+            alert(`Equilátero`);
+        }
     } else {
         alert(`nem sabe o que e triangulo`);
     }
