@@ -11,7 +11,7 @@
     //ENTRADA
     const n1 = Number(prompt(`Digite o 1° numero`));
     const n2 = Number(prompt(`Digite o 2° numero`));
-    const op = Number(prompt(`Digite o nome ou a operação que deseja utilizar`));
+    const op = Number(prompt(`Digite o nome ou a operação que deseja utilizar \n Utilize:\n + (mais) \n - (menos) \n / (divisão) \n * (multiplicação)`));
 
     //PROCESSAMENTO
 
@@ -23,79 +23,55 @@
     resultadoDIVISÃO = divisão
     multiplicação = n1 * n2
     rusultadoMULTIPLIÇÃO = multiplicação
+    
+    // Apartir desta linha validará a escrita da operação
 
-    if (op == String){
+    if (op == String){                                   
         if (op == mais){
-        alert(`${resultadoMAIS}`)
-        } else if (op == menos){
-        alert(`${resultadoMENOS}`)
-      } else if (op == divisão){
-        alert(`${resultadoDIVISÃO}`)
-      } else if (op == multiplicação){
-       alert(`${resultadoMULTIPLICAÇãO}`) 
-      }
-    } else if (op == Number){
-        alert(`Digite uma operação ou o nome da mesma`)
-    } else {
-        if (op == "+"){
-        alert(`${resultadoMAIS}`)
-        } else if (op == "-"){
-        alert(`${resultadoMENOS}`)
-      } else if (op == "/" || op == "%"){
-        alert(`${resultadoDIVISÃO}`)
-      } else if (op == multiplicação){
-       alert(`${resultadoMULTIPLICAÇãO}`) 
-        }
-    }
-    //SAÍDA
-
-</script>
-<script>
-    // area de testes
-
-        // Validações
-    
-    // Valor de op
-
-
-
-    //Validação de par ou Impar
-
-    if (n1 % 2 === 0){
+            if (resultadoMAIS % 2 === 0){
         alert(`O 1° numero é Par`);
-    } else {
+        } else {
         alert(`O 1° numero é Impar`);
-    }
-    if (n2 % 2 === 0){
-        alert(`O 2° numero é Par`);
-    } else {
-        alert(`O 2° numero é Impar`);
-    }
-    
-    //Validação de positivo ou negativo
-    
-    if (n1 > 0 ){
-        alert(`O 1° numero é positivo`);
-    } else {
-        alert(`O 1° numero é negativo`);
-    }
-    if (n2 > 0 ){
-        alert(`O 2° numero é positivo`);
-    } else {
-       alert(`O 2° numero é negativo`);
+        }
+    } else if (op == menos){
+        if (resultadoMENOS % 2 === 0){
+        alert(`O 1° numero é Par`);
+        } else {
+        alert(`O 1° numero é Impar`);
+        }
+    } else if (op == divisão){
+        if (resultadoDIVISÃO % 2 === 0){
+        alert(`O 1° numero é Par`);
+        } else {
+        alert(`O 1° numero é Impar`);
+        }
+    } else if (op == multiplicação){
+        if (resultadoMULTIPLICAÇãO % 2 === 0){
+        alert(`O 1° numero é Par`);
+        } else {
+        alert(`O 1° numero é Impar`);
+        }         
     }
 
-    // Validação inteiro ou decimal
+    // Apartir desta linha validará a operação
 
-    if (n1 % 1 == 0) {
-        alert("O 1° é inteiro");
+    else if (op == "+"){
+        alert(`${resultadoMAIS}`);
+    } else if (op == "-"){
+        alert(`${resultadoMENOS}`);
+    } else if (op == "/" || op == "%"){
+        alert(`${resultadoDIVISÃO}`);
+    } else if (op == "*"){
+       alert(`${resultadoMULTIPLICAÇãO}`);
     } else {
-        alert(`O 1° é decimal`);
-    }
-    if (n2 % 1 == 0) {
-        alert("O 2° é inteiro");
+        alert(`Digite uma operação ou o nome da mesma`);
+        }
     } else {
-        alert(`O 2° é decimal`);
+        alert(`Digite uma operação válida`)
     }
+
+    // Cálculos
+
+    //SAÍDA
 
 </script>
