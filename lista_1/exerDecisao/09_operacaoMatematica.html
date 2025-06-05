@@ -8,70 +8,52 @@
     - inteiro ou decimal.
     */
 
-    //ENTRADA
+    // ENTRADA
     const n1 = Number(prompt(`Digite o 1° numero`));
     const n2 = Number(prompt(`Digite o 2° numero`));
-    const op = Number(prompt(`Digite o nome ou a operação que deseja utilizar \n Utilize:\n + (mais) \n - (menos) \n / (divisão) \n * (multiplicação)`));
+    const op = prompt(`Digite o nome ou a operação que deseja utilizar \n Utilize:\n + (mais) \n - (menos) \n / (divisão) \n * (multiplicação)`).toLowerCase();
 
-    //PROCESSAMENTO
+    // PROCESSAMENTO
+    let resultado;
 
-    mais = n1 + n2
-    resultadoMAIS = mais
-    menos = n1 - n2
-    resultadoMENOS = menos
-    divisão = n1 / n2
-    resultadoDIVISÃO = divisão
-    multiplicação = n1 * n2
-    rusultadoMULTIPLIÇÃO = multiplicação
-    
-    // Apartir desta linha validará a escrita da operação
-
-    if (op == String){                                   
-        if (op == mais){
-            if (resultadoMAIS % 2 === 0){
-        alert(`O 1° numero é Par`);
-        } else {
-        alert(`O 1° numero é Impar`);
-        }
-    } else if (op == menos){
-        if (resultadoMENOS % 2 === 0){
-        alert(`O 1° numero é Par`);
-        } else {
-        alert(`O 1° numero é Impar`);
-        }
-    } else if (op == divisão){
-        if (resultadoDIVISÃO % 2 === 0){
-        alert(`O 1° numero é Par`);
-        } else {
-        alert(`O 1° numero é Impar`);
-        }
-    } else if (op == multiplicação){
-        if (resultadoMULTIPLICAÇãO % 2 === 0){
-        alert(`O 1° numero é Par`);
-        } else {
-        alert(`O 1° numero é Impar`);
-        }         
+    if (op === "mais" || op === "+"){
+        resultado = n1 + n2;
+    } else if (op === "menos" || op === "-"){
+        resultado = n1 - n2;
+    } else if (op === "divisão" || op === "/" || op === "divisao"){
+        resultado = n1 / n2;
+    } else if (op === "multiplicação" || op === "*" || op === "multiplicacao"){
+        resultado = n1 * n2;
+    } else {
+        alert(`Digite uma operação válida`);
     }
 
-    // Apartir desta linha validará a operação
-
-    else if (op == "+"){
-        alert(`${resultadoMAIS}`);
-    } else if (op == "-"){
-        alert(`${resultadoMENOS}`);
-    } else if (op == "/" || op == "%"){
-        alert(`${resultadoDIVISÃO}`);
-    } else if (op == "*"){
-       alert(`${resultadoMULTIPLICAÇãO}`);
-    } else {
-        alert(`Digite uma operação ou o nome da mesma`);
+    if (resultado % 2 === 0) {
+        par = "par"
+        if (resultado > 0){
+            positivo = "positivo"
+        } else {
+            negativo = "negativo"
+        } 
+        if (resultado % 1 === 0){
+        inteiro = "inteiro"
+        } else {
+            decimal = "decimal"
         }
+        alert(`Resultado: ${resultado}\n${par}\n${positivo}\n${inteiro}`);
     } else {
-        alert(`Digite uma operação válida`)
+        impar = "impar"
+        if (resultado >= 0){
+            positivo = "positivo"
+        } else {
+            negativo = "negativo"
+        }
+        if (resultado % 1 === 0){
+        inteiro = "inteiro"
+        } else {
+            decimal = "decimal"
+        }
+        alert(`Resultado: ${resultado}\n${impar}\n${negativo}\n${decimal}`);
     }
-
-    // Cálculos
-
-    //SAÍDA
 
 </script>
