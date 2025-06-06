@@ -1,59 +1,59 @@
 <script>
     /*
     PROBLEMA: OPERAÇÃO MATEMÁTICA
-    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar.
-    O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+    Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
     - par ou ímpar;
     - positivo ou negativo;
     - inteiro ou decimal.
     */
 
-    // ENTRADA
-    const n1 = Number(prompt(`Digite o 1° numero`));
-    const n2 = Number(prompt(`Digite o 2° numero`));
-    const op = prompt(`Digite o nome ou a operação que deseja utilizar \n Utilize:\n + (mais) \n - (menos) \n / (divisão) \n * (multiplicação)`).toLowerCase();
+    //ENTRADA
+    const n1 = Number(prompt("Qual o primeiro número?"))
+    const n2 = Number(prompt("Qual o segundo número?"))
+    const op = prompt("Qual operação deseja realizar? (+ adição; - subtração; * multiplicação; / divisão.)")
+    let resultado = 0
+    let operadorReal = true
+    //PROCESSAMENTO
 
-    // PROCESSAMENTO
-    let resultado;
-
-    if (op === "mais" || op === "+"){
-        resultado = n1 + n2;
-    } else if (op === "menos" || op === "-"){
-        resultado = n1 - n2;
-    } else if (op === "divisão" || op === "/" || op === "divisao"){
-        resultado = n1 / n2;
-    } else if (op === "multiplicação" || op === "*" || op === "multiplicacao"){
-        resultado = n1 * n2;
+    //OPERAÇÃO
+    if (op === "+") {
+        resultado = n1 + n2
+    } else if (op === "-") {
+        resultado = n1 - n2
+    } else if (op === "*") {
+        resultado = n1 * n2
+    } else if (op === "/") {
+        resultado = (n1 / n2).toFixed(2)
     } else {
-        alert(`Digite uma operação válida`);
+        operadorReal = false
+        alert("Seu operador não é válido. (+ adição; - subtração; * multiplicação; / divisão.)")
     }
+    
 
-    if (resultado % 2 === 0) {
-        par = "par"
-        if (resultado > 0){
-            positivo = "positivo"
+    //VERIFICACOES
+    if (operadorReal) {
+
+        alert(resultado)
+
+        if (resultado % 2 === 0) {
+            alert("O resultado é par")
         } else {
-            negativo = "negativo"
-        } 
-        if (resultado % 1 === 0){
-        inteiro = "inteiro"
-        } else {
-            decimal = "decimal"
+            alert("O resultado é ímpar")
         }
-        alert(`Resultado: ${resultado}\n${par}\n${positivo}\n${inteiro}`);
-    } else {
-        impar = "impar"
-        if (resultado >= 0){
-            positivo = "positivo"
+
+        if (resultado < 0) {
+            alert("O resultado é negativo")
         } else {
-            negativo = "negativo"
+            alert("O resultado é positivo")
         }
-        if (resultado % 1 === 0){
-        inteiro = "inteiro"
+
+        if (Number.isInteger(resultado)) {
+            alert("O resultado é inteiro")
         } else {
-            decimal = "decimal"
+            alert("O resultado é decimal")
         }
-        alert(`Resultado: ${resultado}\n${impar}\n${negativo}\n${decimal}`);
     }
+    
+    //SAÍDA
 
 </script>
