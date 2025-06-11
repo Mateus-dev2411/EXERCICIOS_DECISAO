@@ -12,8 +12,8 @@
     //ENTRADA
     const valorSaque = Number(prompt(`Digite o valor a ser sacado(Mínimo: 10 R$ ; Maximo: 600 R$)`));
     //PROCESSAMENTO
-    const valorMX = 600
-    const valorMN = 10
+    const valorMX = 600;
+    const valorMN = 10;
 
 
     if (valorSaque > valorMX || valorSaque < valorMN){
@@ -21,13 +21,13 @@
     } else {
         alert(`Tranzação realizada`);
 
-    Rnota100 = Math.floor(valorSaque / 100);
-    Rnota50 = Math.floor((valorSaque % 100) / 50);
-    Rnota10 = Math.floor(((valorSaque % 100) % 50) / 10 );
-    Rnota5 = Math.floor((((valorSaque % 100) % 50) % 10 ) / 5) ;
-    Rnota1 = Math.floor(((valorSaque % 100) % 50) % 10 ) % 5 ;
+        const Rnota100 = Math.floor(valorSaque / 100);
+        const Rnota50 = Math.floor((valorSaque % 100) / 50);
+        const Rnota10 = Math.floor(((valorSaque % 100) % 50) / 10 );
+        const Rnota5 = Math.floor((((valorSaque % 100) % 50) % 10 ) / 5) ;
+        const Rnota1 = Math.floor(((valorSaque % 100) % 50) % 10 ) % 5 ;
 
-    alert(` ${Rnota100} de notas de: R$100.\n ${Rnota50} de notas de: R$50.\n ${Rnota10} de notas de: R$10.\n ${Rnota5} de notas de: R$5.\n ${Rnota1} de notas de: R$1.`)
+        alert(` ${Rnota100} de notas de: R$100.\n ${Rnota50} de notas de: R$50.\n ${Rnota10} de notas de: R$10.\n ${Rnota5} de notas de: R$5.\n ${Rnota1} de notas de: R$1.`);
     }
     //SAÍDA
 
