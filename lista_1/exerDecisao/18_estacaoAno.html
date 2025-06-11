@@ -6,11 +6,87 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt(`Em qual hemisfério você está? (Norte/Sul)`).toLowerCase();
+    const mes = Number(prompt(`Digite o mez atual`));
 
     //PROCESSAMENTO
+    Janeiro = 1
+    Fevereiro = 2
+    Março = 3
+    Abril = 4
+    Maio = 5
+    Junho = 6
+    Julho = 7
+    Agosto = 8
+    Setembro = 9
+    Outubro = 10
+    Novembro = 11
+    Dezembro = 12
+    estacao = ``
 
-    
-    //SAÍDA
+    // HEMISFÉRIO SUL
+
+    if (hemisferio === `sul`) {
+
+    // Verão: dezembro, janeiro, fevereiro
+
+        if (mes === 12 || mes === 1 || mes === 2) {
+            estacao = `Verão`;
+        }
+        // Outono: março, abril, maio
+
+        else if (mes === 3 || mes === 4 || mes === 5) {
+            estacao = `Outono`;
+        }
+        // Inverno: junho, julho, agosto
+
+        else if (mes === 6 || mes === 7 || mes === 8) {
+            estacao = `Inverno`;
+        }
+        // Primavera: setembro, outubro, novembro
+
+        else if (mes === 9 || mes === 10 || mes === 11) {
+            estacao = `Primavera`;
+        }
+        else {
+            estacao = `Mês inválido`;
+        }
+    }
+
+    // HEMISFÉRIO NORTE
+
+    else if (hemisferio === `norte`) {
+
+    // Inverno: dezembro, janeiro, fevereiro
+
+        if (mes === 12 || mes === 1 || mes === 2) {
+            estacao = `Inverno`;
+        }
+        // Primavera: março, abril, maio
+
+        else if (mes === 3 || mes === 4 || mes === 5) {
+            estacao = `Primavera`;
+        }
+        // Verão: junho, julho, agosto
+
+        else if (mes === 6 || mes === 7 || mes === 8) {
+            estacao = `Verão`;
+        }
+        // Outono: setembro, outubro, novembro
+
+        else if (mes === 9 || mes === 10 || mes === 11) {
+            estacao = `Outono`;
+        }
+        else {
+            estacao = `Mês inválido`;
+        }
+    }
+    else {
+        estacao = `Hemisfério inválido`;
+    }
+
+    // SAÍDA
+
+    alert(`Estação do ano: ${estacao}`);
 
 </script>

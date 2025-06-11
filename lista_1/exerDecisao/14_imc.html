@@ -9,20 +9,20 @@
     */
 
     //ENTRADA
-    const peso = Number(prompt("Digite seu peso em kg:"));
-    const altura = Number(prompt("Digite sua altura em metros:"));
+    const peso = Number(prompt(`Digite seu peso em kg:`));
+    const altura = Number(prompt(`Digite sua altura em metros:`));
 
     //PROCESSAMENTO
     const imc = (peso / (altura ** 2)).toFixed(2);
     let classificacao;
     if (imc <= 18.5) {
-        classificacao = "Seco";
+        classificacao = `Seco`;
     } else if (imc <= 25.0) {
-        classificacao = "Normal";
+        classificacao = `Normal`;
     } else if (imc <= 30.0) {
-        classificacao = "Sobrepeso";
+        classificacao = `Sobrepeso`;
     } else if(imc > 30){
-        classificacao = "Gordo";
+        classificacao = `Gordo`;
     } else {
         alert(`Digite apenas numeros`)
     }

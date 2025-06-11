@@ -8,26 +8,26 @@
     */
 
     //ENTRADA
-    const n1 = Number(prompt("Qual o primeiro número?"));
-    const n2 = Number(prompt("Qual o segundo número?"));
-    const op = prompt("Qual operação deseja realizar? (+ adição; - subtração; * multiplicação; / divisão.)");
+    const n1 = Number(prompt(`Qual o primeiro número?`));
+    const n2 = Number(prompt(`Qual o segundo número?`));
+    const op = prompt(`Qual operação deseja realizar? (+ adição; - subtração; * multiplicação; / divisão.)`);
 
     //PROCESSAMENTO
     let resultado = 0;
     let operadorReal = true;
     
     //OPERAÇÃO
-    if (op === "+") {
+    if (op === `+`) {
         resultado = n1 + n2;
-    } else if (op === "-") {
+    } else if (op === `-`) {
         resultado = n1 - n2;
-    } else if (op === "*") {
+    } else if (op === `*`) {
         resultado = n1 * n2;
-    } else if (op === "/") {
+    } else if (op === `/`) {
         resultado = (n1 / n2).toFixed(2);
     } else {
         operadorReal = false;
-        alert("Seu operador não é válido. (+ adição; - subtração; * multiplicação; / divisão.)");
+        alert(`Seu operador não é válido. (+ adição; - subtração; * multiplicação; / divisão.)`);
     }
     
 
@@ -35,19 +35,19 @@
     if (operadorReal) {
         alert(resultado);
         if (resultado % 2 === 0) {
-            alert("O resultado é par");
+            alert(`O resultado é par`);
         } else {
-            alert("O resultado é ímpar");
+            alert(`O resultado é ímpar`);
         }
         if (resultado < 0) {
-            alert("O resultado é negativo");
+            alert(`O resultado é negativo`);
         } else {
-            alert("O resultado é positivo");
+            alert(`O resultado é positivo`);
         }
         if (Number.isInteger(resultado)) {
-            alert("O resultado é inteiro");
+            alert(`O resultado é inteiro`);
         } else {
-            alert("O resultado é decimal");
+            alert(`O resultado é decimal`);
         }
     }
     // Reportar e entender como fazer diferente
