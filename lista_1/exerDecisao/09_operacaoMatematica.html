@@ -9,12 +9,13 @@
 
     //ENTRADA
     const n1 = Number(prompt(`Qual o primeiro número?`));
+    const op = prompt(`Qual operação deseja realizar?\n (+ adição; - subtração; * multiplicação; / divisão.)`);
     const n2 = Number(prompt(`Qual o segundo número?`));
-    const op = prompt(`Qual operação deseja realizar? (+ adição; - subtração; * multiplicação; / divisão.)`);
 
     //PROCESSAMENTO
     let resultado = 0;
     let operadorReal = true;
+    let final = ``
     
     //OPERAÇÃO
     if (op === `+`) {
@@ -24,31 +25,36 @@
     } else if (op === `*`) {
         resultado = n1 * n2;
     } else if (op === `/`) {
-        resultado = (n1 / n2).toFixed(2);
+        resultado = n1 / n2;
     } else {
         operadorReal = false;
-        alert(`Seu operador não é válido. (+ adição; - subtração; * multiplicação; / divisão.)`);
+        alert(`Seu operador não é válido. (+ adição; - subtração; * multiplicação; / divisão)`);
     }
     
-
     //VERIFICACOES
     if (operadorReal) {
-        alert(resultado);
         if (resultado % 2 === 0) {
-            alert(`O resultado é par`);
+            par = `par`
+            final = `O seu numero é ${par}, `
         } else {
-            alert(`O resultado é ímpar`);
+            impar = `impar`
+            final = `O seu numero é ${impar}, `
         }
         if (resultado < 0) {
-            alert(`O resultado é negativo`);
+            negativo = `negativo`
+            final = final + `${negativo} e `
         } else {
-            alert(`O resultado é positivo`);
+            positivo = `positivo`
+            final = final + `${positivo} e `
         }
         if (Number.isInteger(resultado)) {
-            alert(`O resultado é inteiro`);
+            inteiro = `inteiro`
+            final = final + `${inteiro}.`
         } else {
-            alert(`O resultado é decimal`);
+            decimal = `decimal`
+            final = final + `${decimal}.`
         }
+        alert(`${final}`);
     }
     // Reportar e entender como fazer diferente
     //SAÍDA
